@@ -1,0 +1,366 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.6.16
+-- Dumped by pg_dump version 12.2
+
+-- Started on 2020-11-09 11:27:43
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 2308 (class 0 OID 18081)
+-- Dependencies: 186
+-- Data for Name: object; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.object VALUES (1, 'language');
+INSERT INTO public.object VALUES (2, 'language');
+INSERT INTO public.object VALUES (3, 'language');
+INSERT INTO public.object VALUES (4, 'language');
+INSERT INTO public.object VALUES (5, 'language');
+INSERT INTO public.object VALUES (6, 'genre');
+INSERT INTO public.object VALUES (7, 'genre');
+INSERT INTO public.object VALUES (8, 'genre');
+INSERT INTO public.object VALUES (9, 'genre');
+INSERT INTO public.object VALUES (10, 'genre');
+INSERT INTO public.object VALUES (11, 'genre');
+INSERT INTO public.object VALUES (12, 'genre');
+INSERT INTO public.object VALUES (13, 'place');
+INSERT INTO public.object VALUES (14, 'place');
+INSERT INTO public.object VALUES (15, 'place');
+INSERT INTO public.object VALUES (16, 'place');
+INSERT INTO public.object VALUES (17, 'place');
+INSERT INTO public.object VALUES (18, 'place');
+INSERT INTO public.object VALUES (19, 'place');
+INSERT INTO public.object VALUES (20, 'place');
+INSERT INTO public.object VALUES (21, 'place');
+INSERT INTO public.object VALUES (22, 'place');
+INSERT INTO public.object VALUES (23, 'place');
+INSERT INTO public.object VALUES (24, 'place');
+INSERT INTO public.object VALUES (25, 'place');
+INSERT INTO public.object VALUES (26, 'place');
+INSERT INTO public.object VALUES (27, 'work');
+INSERT INTO public.object VALUES (28, 'work');
+INSERT INTO public.object VALUES (29, 'work');
+INSERT INTO public.object VALUES (30, 'work');
+INSERT INTO public.object VALUES (31, 'work');
+INSERT INTO public.object VALUES (32, 'work');
+INSERT INTO public.object VALUES (45, 'alternative_title');
+INSERT INTO public.object VALUES (46, 'alternative_incipit');
+INSERT INTO public.object VALUES (47, 'person');
+INSERT INTO public.object VALUES (48, 'person');
+INSERT INTO public.object VALUES (49, 'person');
+INSERT INTO public.object VALUES (50, 'person');
+INSERT INTO public.object VALUES (51, 'person');
+INSERT INTO public.object VALUES (52, 'person_language');
+INSERT INTO public.object VALUES (53, 'person_language');
+INSERT INTO public.object VALUES (54, 'person_language');
+INSERT INTO public.object VALUES (55, 'person_language');
+INSERT INTO public.object VALUES (56, 'person_language');
+INSERT INTO public.object VALUES (57, 'source');
+INSERT INTO public.object VALUES (58, 'source');
+INSERT INTO public.object VALUES (59, 'source');
+INSERT INTO public.object VALUES (60, 'source');
+INSERT INTO public.object VALUES (61, 'source');
+INSERT INTO public.object VALUES (62, 'source');
+INSERT INTO public.object VALUES (63, 'alternative_title');
+INSERT INTO public.object VALUES (64, 'activity');
+INSERT INTO public.object VALUES (65, 'activity');
+INSERT INTO public.object VALUES (66, 'activity');
+
+
+--
+-- TOC entry 2311 (class 0 OID 18116)
+-- Dependencies: 189
+-- Data for Name: place; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.place VALUES (13, 36.849997999999999, 14.766667, 'Modica', 'Italy', 'Italy');
+INSERT INTO public.place VALUES (14, 41.683334000000002, 15.383333, 'San Severo', 'Italy', 'Italy');
+INSERT INTO public.place VALUES (15, 43.318610999999997, 11.330556, 'Siena', 'Italy', 'Italy');
+INSERT INTO public.place VALUES (16, 39.083331999999999, 17.116667, 'Crotone', 'Italy', 'Italy');
+INSERT INTO public.place VALUES (17, 44.836151000000001, -0.580816, 'Bordeaux', 'France', 'France');
+INSERT INTO public.place VALUES (18, 47.243599000000003, 0.68920000000000003, 'Tours', 'France', 'France');
+INSERT INTO public.place VALUES (19, 45.763420000000004, 4.8342770000000002, 'Lyon', 'France', 'France');
+INSERT INTO public.place VALUES (20, 41.545448, -8.4265070000000009, 'Braga', 'Portugal', 'Portugal');
+INSERT INTO public.place VALUES (21, 37.019356000000002, -7.9304399999999999, 'Faro', 'Portugal', 'Portugal');
+INSERT INTO public.place VALUES (22, 37.137920000000001, -8.0202159999999996, 'Loulè', 'Portugal', 'Portugal');
+INSERT INTO public.place VALUES (23, 50.927222999999998, 11.586111000000001, 'Jena', 'Germany', 'Germany');
+INSERT INTO public.place VALUES (24, 49.75, 6.6333330000000004, 'Trier', 'Germany', 'Germany');
+INSERT INTO public.place VALUES (25, 48.400002000000001, 9.983333, 'Ulm', 'Germany', 'Germany');
+INSERT INTO public.place VALUES (26, 51.366669000000002, 7.483333, 'Hagen', 'Germany', 'Germany');
+
+
+--
+-- TOC entry 2315 (class 0 OID 18195)
+-- Dependencies: 193
+-- Data for Name: person; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.person VALUES (47, 'Giorgio', 'Rossi', '1170-07-26', '1250-03-04', NULL, 'author', 'Hsond sns dkindidnb sojoshdo sihiosn di di sisnnhdojd', '1170-07-26', '1250-03-04', NULL, NULL, 16, '26/07/1170', '04/03/1250');
+INSERT INTO public.person VALUES (48, 'Maria', 'Bianchi', '1246-02-21', '1297-08-11', NULL, 'author', NULL, NULL, NULL, NULL, NULL, 14, '21/02/1246', '11/08/1297');
+INSERT INTO public.person VALUES (49, 'Gerard', 'Valleise', '1214-10-15', '1250-11-18', NULL, 'author', NULL, NULL, NULL, NULL, NULL, 19, '15/10/1214', '18/11/1250');
+INSERT INTO public.person VALUES (50, 'Jonas', 'Kahnwald', '1320-12-24', '1410-12-30', NULL, 'author', NULL, NULL, NULL, NULL, NULL, 26, '24/12/1320', '30/12/1410');
+INSERT INTO public.person VALUES (51, 'Pablo', 'Adelan', '1157-10-11', '1232-11-28', NULL, 'author', NULL, NULL, NULL, NULL, NULL, 21, '11/10/1157', '28/11/1232');
+
+
+--
+-- TOC entry 2329 (class 0 OID 18432)
+-- Dependencies: 207
+-- Data for Name: activity; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.activity VALUES (64, 47, 16, '1170-07-26', '1170', NULL, 'Birth of Giorgio Rossi', 'Note 1', '26/07/1170', NULL, NULL, NULL, NULL);
+INSERT INTO public.activity VALUES (65, 50, 23, '1320-12-24', '1320', NULL, 'Birth of Jonas Kahnwald', 'Note 1', '24/12/1320', NULL, NULL, NULL, NULL);
+INSERT INTO public.activity VALUES (66, 47, 16, '1196-03-12', '1196', NULL, 'Battle of Crotone', 'Note 1', '12/03/1196', NULL, NULL, NULL, NULL);
+
+
+--
+-- TOC entry 2310 (class 0 OID 18103)
+-- Dependencies: 188
+-- Data for Name: genre; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.genre VALUES (6, 'Novel');
+INSERT INTO public.genre VALUES (7, 'Chanson de geste');
+INSERT INTO public.genre VALUES (8, 'Canzone');
+INSERT INTO public.genre VALUES (9, 'Tenzone');
+INSERT INTO public.genre VALUES (10, 'Lais');
+INSERT INTO public.genre VALUES (11, 'Descort');
+INSERT INTO public.genre VALUES (12, 'Lyric');
+
+
+--
+-- TOC entry 2309 (class 0 OID 18090)
+-- Dependencies: 187
+-- Data for Name: language; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.language VALUES (1, 'French');
+INSERT INTO public.language VALUES (2, 'Italian');
+INSERT INTO public.language VALUES (3, 'Occitan');
+INSERT INTO public.language VALUES (4, 'Galician-portuguese');
+INSERT INTO public.language VALUES (5, 'German');
+
+
+--
+-- TOC entry 2312 (class 0 OID 18131)
+-- Dependencies: 190
+-- Data for Name: work; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.work VALUES (27, 'Awoshnfwv kbvtxrxgh', 'Bao skndib aknsdaid', '68', '1200-12-31', '1200-12-31', '1200-12-31', NULL, NULL, NULL, 'skndkjbd sibd ebdekldno', 2, 6, 15, '1200');
+INSERT INTO public.work VALUES (28, 'Jdnownf', 'Gsbdo skfn', '94', '1305-12-31', '1305-12-31', '1305-12-31', NULL, NULL, NULL, NULL, 2, 12, 13, '31/12/1305');
+INSERT INTO public.work VALUES (29, 'Kohebsinbc', 'Usibfsf sfkbs kifbk', '54', '1450-12-31', '1450-12-31', '1450-12-31', NULL, NULL, NULL, NULL, 1, 6, 18, '1450');
+INSERT INTO public.work VALUES (30, 'Ydwnk', 'Hdnid seondso', '84', '1215-12-31', '1215-12-31', '1215-12-31', NULL, NULL, NULL, NULL, 4, 7, 20, '1215');
+INSERT INTO public.work VALUES (31, 'Boahdb', 'Kwnsod dihid', '23', '1195-12-31', '1195-12-31', '1195-12-31', NULL, NULL, NULL, NULL, 5, 8, 23, '31/12/1195');
+INSERT INTO public.work VALUES (32, 'Ssdbksbfk', 'Joshdbsnkoe kmd', '9', '1183-12-31', '1183-12-31', '1183-12-31', NULL, NULL, NULL, NULL, 5, 9, 25, '1183');
+
+
+--
+-- TOC entry 2314 (class 0 OID 18177)
+-- Dependencies: 192
+-- Data for Name: alternative_incipit; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.alternative_incipit VALUES (46, 'Fsoandb wjkd wddaq', 27);
+
+
+--
+-- TOC entry 2313 (class 0 OID 18159)
+-- Dependencies: 191
+-- Data for Name: alternative_title; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.alternative_title VALUES (45, 'Hwos bi', 27);
+INSERT INTO public.alternative_title VALUES (63, 'Goasns donbd sonsond', 27);
+
+
+--
+-- TOC entry 2326 (class 0 OID 18366)
+-- Dependencies: 204
+-- Data for Name: author; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.author VALUES (47, 'Giorgio', 'Rossi', '1170-07-26', '1250-03-04', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO public.author VALUES (48, 'Maria', 'Bianchi', '1246-02-21', '1297-08-11', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO public.author VALUES (49, 'Gerard', 'Valleise', '1214-10-15', '1250-11-18', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO public.author VALUES (50, 'Jonas', 'Kahnwald', '1320-12-24', '1410-12-30', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO public.author VALUES (51, 'Pablo', 'Adelan', '1157-10-11', '1232-11-28', NULL, NULL, NULL, NULL, NULL, NULL);
+
+
+--
+-- TOC entry 2327 (class 0 OID 18379)
+-- Dependencies: 205
+-- Data for Name: author_language; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.author_language VALUES (47, 2);
+INSERT INTO public.author_language VALUES (48, 2);
+INSERT INTO public.author_language VALUES (49, 1);
+INSERT INTO public.author_language VALUES (50, 5);
+INSERT INTO public.author_language VALUES (51, 4);
+
+
+--
+-- TOC entry 2328 (class 0 OID 18394)
+-- Dependencies: 206
+-- Data for Name: authorship; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.authorship VALUES (47, 27, 'primary');
+INSERT INTO public.authorship VALUES (48, 28, 'primary');
+INSERT INTO public.authorship VALUES (49, 29, 'primary');
+INSERT INTO public.authorship VALUES (50, 32, 'primary');
+INSERT INTO public.authorship VALUES (51, 30, 'primary');
+INSERT INTO public.authorship VALUES (50, 31, 'primary');
+
+
+--
+-- TOC entry 2318 (class 0 OID 18246)
+-- Dependencies: 196
+-- Data for Name: citation; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.citation VALUES (27, 47);
+
+
+--
+-- TOC entry 2321 (class 0 OID 18291)
+-- Dependencies: 199
+-- Data for Name: source; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.source VALUES (57, 'Awoshnfwv', 'manuscript', '97', 'jbkgbo', '1232-12-31', '1232-12-31', '1232-12-31', NULL, NULL, '31/12/1232');
+INSERT INTO public.source VALUES (58, 'Jdnownf', 'manuscript', '92', 'oajan', '1305-12-31', '1305-12-31', '1305-12-31', NULL, NULL, '31/12/1305');
+INSERT INTO public.source VALUES (59, 'Kohebsinbc', 'printed', '32', 'odhiwsbf', '1450-12-31', '1450-12-31', '1450-12-31', NULL, NULL, '1450');
+INSERT INTO public.source VALUES (60, 'Ydwnk', 'printed', '76', 'abfoe', '1215-12-31', '1215-12-31', '1215-12-31', NULL, NULL, '1215');
+INSERT INTO public.source VALUES (61, 'Boahdb', 'manuscript', '123', 'soajncd', '1195-12-31', '1195-12-31', '1195-12-31', NULL, NULL, '1195');
+INSERT INTO public.source VALUES (62, 'Ssdbksbfk', 'manuscript', '12', 'oihojcb', '1183-12-31', '1183-12-31', '1183-12-31', NULL, NULL, '1183');
+
+
+--
+-- TOC entry 2322 (class 0 OID 18306)
+-- Dependencies: 200
+-- Data for Name: derivation; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.derivation VALUES (27, 57);
+INSERT INTO public.derivation VALUES (28, 58);
+INSERT INTO public.derivation VALUES (29, 59);
+INSERT INTO public.derivation VALUES (30, 60);
+INSERT INTO public.derivation VALUES (31, 61);
+INSERT INTO public.derivation VALUES (32, 62);
+
+
+--
+-- TOC entry 2319 (class 0 OID 18261)
+-- Dependencies: 197
+-- Data for Name: mention_place; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.mention_place VALUES (27, 18);
+INSERT INTO public.mention_place VALUES (31, 26);
+
+
+--
+-- TOC entry 2316 (class 0 OID 18213)
+-- Dependencies: 194
+-- Data for Name: person_language; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.person_language VALUES (47, 2);
+INSERT INTO public.person_language VALUES (48, 2);
+INSERT INTO public.person_language VALUES (49, 1);
+INSERT INTO public.person_language VALUES (50, 5);
+INSERT INTO public.person_language VALUES (51, 4);
+
+
+--
+-- TOC entry 2325 (class 0 OID 18351)
+-- Dependencies: 203
+-- Data for Name: production; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.production VALUES (57, 14);
+INSERT INTO public.production VALUES (58, 16);
+INSERT INTO public.production VALUES (59, 19);
+INSERT INTO public.production VALUES (60, 21);
+INSERT INTO public.production VALUES (61, 24);
+INSERT INTO public.production VALUES (62, 26);
+
+
+--
+-- TOC entry 2317 (class 0 OID 18228)
+-- Dependencies: 195
+-- Data for Name: relative; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.relative VALUES (47, 48, 'parent');
+INSERT INTO public.relative VALUES (49, 48, 'spouse');
+
+
+--
+-- TOC entry 2323 (class 0 OID 18321)
+-- Dependencies: 201
+-- Data for Name: source_genre; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.source_genre VALUES (57, 6);
+INSERT INTO public.source_genre VALUES (58, 12);
+INSERT INTO public.source_genre VALUES (59, 6);
+INSERT INTO public.source_genre VALUES (60, 7);
+INSERT INTO public.source_genre VALUES (61, 8);
+INSERT INTO public.source_genre VALUES (62, 9);
+
+
+--
+-- TOC entry 2324 (class 0 OID 18336)
+-- Dependencies: 202
+-- Data for Name: source_language; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.source_language VALUES (57, 2);
+INSERT INTO public.source_language VALUES (58, 2);
+INSERT INTO public.source_language VALUES (59, 1);
+INSERT INTO public.source_language VALUES (60, 4);
+INSERT INTO public.source_language VALUES (61, 5);
+INSERT INTO public.source_language VALUES (62, 5);
+
+
+--
+-- TOC entry 2320 (class 0 OID 18276)
+-- Dependencies: 198
+-- Data for Name: tenzone_with; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.tenzone_with VALUES (27, 49);
+INSERT INTO public.tenzone_with VALUES (28, 50);
+
+
+--
+-- TOC entry 2335 (class 0 OID 0)
+-- Dependencies: 185
+-- Name: object_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.object_object_id_seq', 66, true);
+
+
+-- Completed on 2020-11-09 11:27:44
+
+--
+-- PostgreSQL database dump complete
+--
+
