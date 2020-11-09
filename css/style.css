@@ -1,0 +1,94 @@
+html{
+  position: relative;
+}
+
+body{
+  font-family: Volkhov !important;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+#container{
+  position: relative;
+  height: 95vh;
+
+}
+
+#mapid{
+  position: absolute;
+  height: 80%;
+  width: 100%;
+}
+#showtimeline {
+  position: relative;
+  top: 80%;
+
+}
+#visualization {
+  top: 80%;
+  width: 100%;
+  border: 1px solid lightgray;
+
+}
+
+#sidebar-content{
+  color: #01265E;
+  font-family: Poppins;
+}
+#sidebar-title{
+  color: #01265E;
+  font-family: Volkhov;
+}
+#main
+{
+    height: 100%;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+}
+
+.groupclass0{
+  background-color:	rgb(114, 176, 38, 0.5) !important;
+}
+.groupclass1{
+  background-color: rgb(56, 170, 221, 0.5) !important;
+}
+.groupclass2{
+  background-color: rgb(214, 62, 42, 0.5) !important;
+}
+.groupclass3{
+  background-color: rgb(210, 82, 185, 0.5) !important;
+}
+.groupclass0 .vis-item .vis-dot, .groupclass1 .vis-item .vis-dot, .groupclass2 .vis-item .vis-dot, .groupclass3 .vis-item .vis-dot{
+  border-color:	#4d4d4d !important;
+}
+.vis-labelset .vis-label .fas{
+  color: white !important;
+  
+}
+.vis-custom-time {
+    background-color: #1b4c88 !important;
+}
+.leaflet-full-height{
+  flex-grow: 1 !important;
+}
+
+.btn-group.special {
+  display: flex;
+}
+
+#about-tabs{
+  margin-bottom: 15px;
+}
+.sidebar-link{
+  text-decoration: underline;
+}
+.sidebar-link:hover{
+  cursor:pointer;
+  color:red;
+}
