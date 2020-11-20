@@ -51,13 +51,12 @@ function getBaseLayers(){
     marker.bindTooltip(worktooltip);
     workmarkers.push(marker);
   }
-  /* grouping work markers in a single layer */
 
+  /* grouping work markers in a single layer */
   worklayer = L.layerGroup(workmarkers);
 
 
   /* adding category 'Works' */
-
   //categories.Works=worklayer;
 
   /*SOURCE LAYER*/
@@ -96,11 +95,9 @@ function getBaseLayers(){
 
 
   /* adding category 'Sources' */
-
   //categories.Sources=sourcelayer;
-
+  
   /* adding all categories to map*/
-
 //  L.control.layers({}, categories, false).addTo(mymap);
 
 /*PERSON LAYER*/

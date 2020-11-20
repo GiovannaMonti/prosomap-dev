@@ -14,7 +14,6 @@ body{
 #container{
   position: relative;
   height: 95vh;
-
 }
 
 #mapid{
@@ -22,18 +21,14 @@ body{
   height: 80%;
   width: 100%;
 }
-#showtimeline {
-  position: relative;
-  top: 80%;
 
-}
 #visualization {
   top: 80%;
   width: 100%;
   border: 1px solid lightgray;
 
 }
-
+/* SIDEBAR */
 #sidebar-content{
   color: #01265E;
   font-family: Poppins;
@@ -42,16 +37,33 @@ body{
   color: #01265E;
   font-family: Volkhov;
 }
-#main
-{
-    height: 100%;
-    position:fixed;
-    top:0px;
-    bottom:0px;
-    left:0px;
-    right:0px;
+.sidebar-div{
+  margin-bottom: 15px;
 }
-
+.sidebar-subtitle{
+  font-weight: bold;
+  font-size: 120%;
+  margin-bottom: 2px;
+}
+.sidebar-item{
+  margin: 1px auto;
+}
+.sidebar-link{
+  text-decoration: underline;
+}
+.sidebar-link:hover{
+  cursor:pointer;
+  color:red;
+}
+#about-tabs{
+  margin-bottom: 15px;
+}
+/* END SIDEBAR */
+/* TIMELINE */
+}
+.vis-custom-time {
+    background-color: #1b4c88 !important;
+}
 .groupclass0{
   background-color:	rgb(114, 176, 38, 0.5) !important;
 }
@@ -69,26 +81,14 @@ body{
 }
 .vis-labelset .vis-label .fas{
   color: white !important;
-  
-}
-.vis-custom-time {
-    background-color: #1b4c88 !important;
-}
+
+/* END TIMELINE */
+
+/*
 .leaflet-full-height{
   flex-grow: 1 !important;
 }
-
 .btn-group.special {
   display: flex;
 }
-
-#about-tabs{
-  margin-bottom: 15px;
-}
-.sidebar-link{
-  text-decoration: underline;
-}
-.sidebar-link:hover{
-  cursor:pointer;
-  color:red;
-}
+*/

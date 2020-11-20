@@ -450,45 +450,33 @@ if(markertype=="work"){
     }
   }
   var place=thiswork.place;
-    /*var end_date=thiswork.date;
-  var dd = String(end_date.getDate()).padStart(2, '0');
-  var mm = String(end_date.getMonth() + 1).padStart(2, '0'); //January is 0!
-  var yyyy = end_date.getFullYear();
-
-  end_date = dd + '/' + mm + '/' + yyyy; */
 
  /* general information */
   let generalDiv=document.createElement('div');
-  generalDiv.className=('sidebar-div');
-  generalDiv.style.marginBottom='15px';
+  generalDiv.className='sidebar-div';
   let generalTitle = document.createElement('p');
-  generalTitle.className=('sidebar-subtitle');
+  generalTitle.className='sidebar-subtitle';
   generalTitle.innerHTML = '<i class="fas fa-info-circle"></i> '+'GENERAL INFORMATION';
-  generalTitle.style.fontWeight='bold';
-  generalTitle.style.fontSize='120%';
-  generalTitle.style.marginBottom='2px';
   generalDiv.appendChild(generalTitle);
     /*author*/
   authorarray.forEach( item =>{
     let author = document.createElement('p');
     author.innerHTML = '<b>Author:</b> ' + item.authorname + ' ' + item.authorsurname + ' ('+item.authortype+')';
-    author.className="sidebar-link";
+    author.className="sidebar-item sidebar-link";
     author.markerID=item.authorid;
     author.type="person";
-    author.style.marginTop='1px';
-    author.style.marginBottom='1px';
     author.addEventListener('click', onMarkerClick);
     generalDiv.appendChild(author);
   })
     /*genre*/
   let genre = document.createElement('p');
+  genre.className = 'sidebar-item';
   genre.innerHTML = '<b>Genre:</b> ' + genreinfo;
-  genre.style.marginTop='1px';
-  genre.style.marginBottom='1px';
   generalDiv.appendChild(genre);
 
     /*language*/
   let language = document.createElement('p');
+  language.className = 'sidebar-item';
   language.innerHTML = '<b>Language:</b> ' + langinfo;
   language.style.marginTop='1px';
   language.style.marginBottom='1px';
@@ -498,11 +486,9 @@ if(markertype=="work"){
   sourcearr.forEach( item =>{
     let source = document.createElement('p');
     source.innerHTML = '<b>Source:</b> ' + item.sourcename + ' ' + ' ('+item.sourcetype+')';
-    source.className="sidebar-link";
+    source.className="sidebar-item sidebar-link";
     source.markerID=item.sourceid;
     source.type="source";
-    source.style.marginTop='1px';
-    source.style.marginBottom='1px';
     source.addEventListener('click', onMarkerClick);
     generalDiv.appendChild(source);
   })
@@ -510,52 +496,39 @@ if(markertype=="work"){
 
   /*place and time*/
   let placedateDiv=document.createElement('div');
-  placedateDiv.className=('sidebar-div');
-  placedateDiv.style.marginBottom='15px';
-
+  placedateDiv.className='sidebar-div';
   let placedateTitle = document.createElement('p');
-  placedateTitle.className=('sidebar-subtitle');
+  placedateTitle.className='sidebar-subtitle';
   placedateTitle.innerHTML = '<i class="fas fa-globe"></i> '+'PLACE AND TIME';
-  placedateTitle.style.fontWeight='bold';
-  placedateTitle.style.fontSize='120%';
-  placedateTitle.style.marginBottom='2px';
   placedateDiv.appendChild(placedateTitle);
 
   let placeinfo = document.createElement('p');
   placeinfo.innerHTML = '<b>Place of composition:</b> ' + place;
-  placeinfo.style.marginTop='1px';
-  placeinfo.style.marginBottom='1px';
+  placeinfo.className = 'sidebar-item';
   placedateDiv.appendChild(placeinfo);
 
   let dateinfo = document.createElement('p');
   dateinfo.innerHTML = '<b>Date of composition:</b> ' + otherinfo.end_date_string;
-  dateinfo.style.marginTop='1px';
-  dateinfo.style.marginBottom='1px';
+  dateinfo.className = 'sidebar-item';
   placedateDiv.appendChild(dateinfo);
 
   sidebarContent.appendChild(placedateDiv);
 
   /*related to this work */
 
-    let relatedDiv=document.createElement('div');
-    relatedDiv.className=('sidebar-div');
-    relatedDiv.style.marginBottom='15px';
-
-    let relatedTitle = document.createElement('p');
-    relatedTitle.className=('sidebar-subtitle');
-    relatedTitle.innerHTML = '<i class="fas fa-angle-double-right"></i> ' + 'RELATED TO THIS WORK';
-    relatedTitle.style.fontWeight='bold';
-    relatedTitle.style.fontSize='120%';
-    relatedTitle.style.marginBottom='2px';
-    relatedDiv.appendChild(relatedTitle);
+  let relatedDiv=document.createElement('div');
+  relatedDiv.className='sidebar-div';
+  let relatedTitle = document.createElement('p');
+  relatedTitle.className='sidebar-subtitle';
+  relatedTitle.innerHTML = '<i class="fas fa-angle-double-right"></i> ' + 'RELATED TO THIS WORK';
+  relatedDiv.appendChild(relatedTitle);
 
     /*mentioned places*/
   if(mentionarray[0]!=null){
     mentionarray.forEach( item =>{
       let mention = document.createElement('p');
+      mention.className = 'sidebar-item';
       mention.innerHTML = '<b>Mentioned place:</b> ' + item ;
-      mention.style.marginTop='1px';
-      mention.style.marginBottom='1px';
       relatedDiv.appendChild(mention);
     })
   }
@@ -565,13 +538,9 @@ if(markertype=="work"){
     citarray.forEach( item =>{
       let cit = document.createElement('p');
       cit.innerHTML = '<b>Mentioned person:</b> ' + item.citname + ' ' + item.citsurname ;
-      cit.className="sidebar-link";
+      cit.className="sidebar-item sidebar-link";
       cit.markerID=item.personid;
-      console.log(cit.markerID);
       cit.type="person";
-      console.log(cit.type);
-      cit.style.marginTop='1px';
-      cit.style.marginBottom='1px';
       cit.addEventListener('click', onMarkerClick);
       relatedDiv.appendChild(cit);
     })
@@ -581,11 +550,9 @@ if(markertype=="work"){
     tenzonearray.forEach( item =>{
       let tenzone = document.createElement('p');
       tenzone.innerHTML = '<b>Tenzone with:</b> ' + item.tenzonename + ' ' + item.tenzonesurname ;
-      tenzone.className='sidebar-link';
+      tenzone.className='sidebar-item sidebar-link';
       tenzone.markerID=item.personid;
       tenzone.type="person";
-      tenzone.style.marginTop='1px';
-      tenzone.style.marginBottom='1px';
       tenzone.addEventListener('click', onMarkerClick);
       relatedDiv.appendChild(tenzone);
     })
@@ -596,23 +563,18 @@ if(markertype=="work"){
 
   /*other information */
   let otherDiv=document.createElement('div');
-  otherDiv.className=('sidebar-div');
-  otherDiv.style.marginBottom='15px';
+  otherDiv.className='sidebar-div';
 
   let otherTitle = document.createElement('p');
-  otherTitle.className=('sidebar-subtitle');
+  otherTitle.className='sidebar-subtitle';
   otherTitle.innerHTML = '<i class="far fa-sticky-note"></i> ' + 'OTHER INFORMATION';
-  otherTitle.style.fontWeight='bold';
-  otherTitle.style.fontSize='120%';
-  otherTitle.style.marginBottom='2px';
   otherDiv.appendChild(otherTitle);
 
   if(alttitlearray[0]!=null){
     alttitlearray.forEach( item =>{
       let altt = document.createElement('p');
       altt.innerHTML = '<b>Alternative title:</b> ' + item ;
-      altt.style.marginTop='1px';
-      altt.style.marginBottom='1px';
+      altt.className='sidebar-item';
       otherDiv.appendChild(altt);
     })
   }
@@ -620,8 +582,7 @@ if(markertype=="work"){
   if(otherinfo.incipit!=''){
     let incipit = document.createElement('p');
     incipit.innerHTML = '<b>Incipit:</b> ' + otherinfo.incipit;
-    incipit.style.marginTop='1px';
-    incipit.style.marginBottom='1px';
+    incipit.className='sidebar-item';
     otherDiv.appendChild(incipit);
   }
 
@@ -629,49 +590,42 @@ if(markertype=="work"){
     altincipitarray.forEach( item =>{
       let alti = document.createElement('p');
       alti.innerHTML = '<b>Alternative incipit:</b> ' + item ;
-      alti.style.marginTop='1px';
-      alti.style.marginBottom='1px';
+      alti.className='sidebar-item';
       otherDiv.appendChild(alti);
     })
   }
 
   let repertoire = document.createElement('p');
   repertoire.innerHTML = '<b>Repertoire:</b> ' + otherinfo.repertoire;
-  repertoire.style.marginTop='1px';
-  repertoire.style.marginBottom='1px';
+  repertoire.className='sidebar-item';
   otherDiv.appendChild(repertoire);
 
   let end_ante = document.createElement('p');
   end_ante.innerHTML = '<b>Date of composition (ante):</b> ' + otherinfo.end_ante;
-  end_ante.style.marginTop='1px';
-  end_ante.style.marginBottom='1px';
+  end_ante.className='sidebar-item';
   otherDiv.appendChild(end_ante);
 
   let end_post = document.createElement('p');
   end_post.innerHTML = '<b>Date of composition (post):</b> ' + otherinfo.end_post;
-  end_post.style.marginTop='1px';
-  end_post.style.marginBottom='1px';
+  end_post.className='sidebar-item';
   otherDiv.appendChild(end_post);
 
   if(otherinfo.rhyme_scheme!=''){
     let rhyme_scheme = document.createElement('p');
     rhyme_scheme.innerHTML = '<b>Rhyme scheme:</b> ' + otherinfo.rhyme_scheme;
-    rhyme_scheme.style.marginTop='1px';
-    rhyme_scheme.style.marginBottom='1px';
+    rhyme_scheme.className='sidebar-item';
     otherDiv.appendChild(rhyme_scheme);
   }
   if(otherinfo.syllabic_pattern!=''){
     let syllabic_pattern = document.createElement('p');
     syllabic_pattern.innerHTML = '<b>Syllabic pattern:</b> ' + otherinfo.syllabic_pattern;
-    syllabic_pattern.style.marginTop='1px';
-    syllabic_pattern.style.marginBottom='1px';
+    syllabic_pattern.className='sidebar-item';
     otherDiv.appendChild(syllabic_pattern);
   }
   if(otherinfo.metric_repertoire!=''){
     let metric_repertoire = document.createElement('p');
     metric_repertoire.innerHTML = '<b>Metric repertoire:</b> ' + otherinfo.metric_repertoire;
-    metric_repertoire.style.marginTop='1px';
-    metric_repertoire.style.marginBottom='1px';
+    metric_repertoire.className='sidebar-item';
     otherDiv.appendChild(metric_repertoire);
     console.log(otherinfo.metric_repertoire);
   }
@@ -679,22 +633,17 @@ if(markertype=="work"){
   sidebarContent.appendChild(otherDiv);
 
   let bodyDiv=document.createElement('div');
-  bodyDiv.className=('sidebar-div');
-  bodyDiv.style.marginBottom='15px';
+  bodyDiv.className='sidebar-div';
 
   let bodyTitle = document.createElement('p');
-  bodyTitle.className=('sidebar-subtitle');
+  bodyTitle.className='sidebar-subtitle';
   bodyTitle.innerHTML = '<i class="fas fa-pencil-alt"></i> ' + 'NOTES';
-  bodyTitle.style.fontWeight='bold';
-  bodyTitle.style.fontSize='120%';
-  bodyTitle.style.marginBottom='2px';
   bodyDiv.appendChild(bodyTitle);
 
   if(otherinfo.body!=''){
     let notes = document.createElement('p');
     notes.innerHTML = '<b>Note:</b> ' + otherinfo.body;
-    notes.style.marginTop='1px';
-    notes.style.marginBottom='1px';
+    notes.className='sidebar-item';
     bodyDiv.appendChild(notes);
     sidebarContent.appendChild(bodyDiv);
   }
@@ -712,35 +661,20 @@ if(markertype=="source"){
   }
 
   var place=thissource.sourceplace;
-  /*var date=thissource.date;
-  if(date!=null){
-    var dd = String(date.getDate()).padStart(2, '0');
-    var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = date.getFullYear();
-
-    date = dd + '/' + mm + '/' + yyyy;
-  }
-  else{ date = '';}*/
-
 
  /* general information */
 
   let generalDiv=document.createElement('div');
-  generalDiv.className=('sidebar-div');
-  generalDiv.style.marginBottom='15px';
+  generalDiv.className='sidebar-div';
   let generalTitle = document.createElement('p');
-  generalTitle.className=('sidebar-subtitle');
+  generalTitle.className='sidebar-subtitle';
   generalTitle.innerHTML = '<i class="fas fa-info-circle"></i> '+'GENERAL INFORMATION';
-  generalTitle.style.fontWeight='bold';
-  generalTitle.style.fontSize='120%';
-  generalTitle.style.marginBottom='2px';
   generalDiv.appendChild(generalTitle);
 
     /* source type */
   let sourcetype = document.createElement('p');
   sourcetype.innerHTML = '<b>Type:</b> ' + otherinfo.sourcetype;
-  sourcetype.style.marginTop='1px';
-  sourcetype.style.marginBottom='1px';
+  sourcetype.className='sidebar-item';
   generalDiv.appendChild(sourcetype);
 
     /*genre*/
@@ -748,8 +682,7 @@ if(markertype=="source"){
   genrearray.forEach( item =>{
     let genre = document.createElement('p');
     genre.innerHTML = '<b>Genre:</b> ' + item;
-    genre.style.marginTop='1px';
-    genre.style.marginBottom='1px';
+    genre.className='sidebar-item';
     generalDiv.appendChild(genre);
   })
 
@@ -757,8 +690,7 @@ if(markertype=="source"){
   languagearray.forEach( item =>{
     let language = document.createElement('p');
     language.innerHTML = '<b>Language:</b> ' + item;
-    language.style.marginTop='1px';
-    language.style.marginBottom='1px';
+    language.className='sidebar-item';
     generalDiv.appendChild(language);
   })
 
@@ -766,21 +698,16 @@ if(markertype=="source"){
 
   /*place and time*/
   let placedateDiv=document.createElement('div');
-  placedateDiv.className=('sidebar-div');
-  placedateDiv.style.marginBottom='15px';
+  placedateDiv.className='sidebar-div';
 
   let placedateTitle = document.createElement('p');
-  placedateTitle.className=('sidebar-subtitle');
+  placedateTitle.className='sidebar-subtitle';
   placedateTitle.innerHTML = '<i class="fas fa-globe"></i> '+'PLACE AND TIME';
-  placedateTitle.style.fontWeight='bold';
-  placedateTitle.style.fontSize='120%';
-  placedateTitle.style.marginBottom='2px';
   placedateDiv.appendChild(placedateTitle);
 
   let placeinfo = document.createElement('p');
   placeinfo.innerHTML = '<b>Place of production:</b> ' + place;
-  placeinfo.style.marginTop='1px';
-  placeinfo.style.marginBottom='1px';
+  placeinfo.className='sidebar-item';
   placedateDiv.appendChild(placeinfo);
 
   let dateinfo = document.createElement('p');
@@ -790,34 +717,27 @@ if(markertype=="source"){
   else{
     dateinfo.innerHTML = '<b>Date:</b> Unknown';
   }
-  dateinfo.style.marginTop='1px';
-  dateinfo.style.marginBottom='1px';
+  dateinfo.className='sidebar-item';
   placedateDiv.appendChild(dateinfo);
 
   sidebarContent.appendChild(placedateDiv);
 
   /* contained in this source */
   let containedDiv=document.createElement('div');
-  containedDiv.className=('sidebar-div');
-  containedDiv.style.marginBottom='15px';
+  containedDiv.className='sidebar-div';
 
   let containedTitle = document.createElement('p');
-  containedTitle.className=('sidebar-subtitle');
+  containedTitle.className='sidebar-subtitle';
   containedTitle.innerHTML = '<i class="fas fa-book-open"></i> '+'CONTAINED IN THIS SOURCE';
-  containedTitle.style.fontWeight='bold';
-  containedTitle.style.fontSize='120%';
-  containedTitle.style.marginBottom='2px';
   containedDiv.appendChild(containedTitle);
 
     /*contained works */
   workarr.forEach( item =>{
     let worktitle = document.createElement('p');
     worktitle.innerHTML = '<b>Work:</b> ' + item.worktitle;
-    worktitle.className='sidebar-link';
+    worktitle.className='sidebar-item sidebar-link';
     worktitle.markerID=item.workid;
     worktitle.type="work";
-    worktitle.style.marginTop='1px';
-    worktitle.style.marginBottom='1px';
     worktitle.addEventListener('click', onMarkerClick);
     containedDiv.appendChild(worktitle);
   })
@@ -826,74 +746,60 @@ if(markertype=="source"){
 
   /*other information*/
   let otherDiv=document.createElement('div');
-  otherDiv.className=('sidebar-div');
-  otherDiv.style.marginBottom='15px';
+  otherDiv.className='sidebar-div';
 
   let otherTitle = document.createElement('p');
-  otherTitle.className=('sidebar-subtitle');
+  otherTitle.className='sidebar-subtitle';
   otherTitle.innerHTML = '<i class="far fa-sticky-note"></i> ' + 'OTHER INFORMATION';
-  otherTitle.style.fontWeight='bold';
-  otherTitle.style.fontSize='120%';
-  otherTitle.style.marginBottom='2px';
   otherDiv.appendChild(otherTitle);
 
   if(otherinfo.pressmark!=''){
     let pressmark = document.createElement('p');
     pressmark.innerHTML = '<b>Pressmark:</b> ' + otherinfo.pressmark;
-    pressmark.style.marginTop='1px';
-    pressmark.style.marginBottom='1px';
+    pressmark.className='sidebar-item';
     otherDiv.appendChild(pressmark);
   }
 
   if(otherinfo.sign!=''){
     let sign = document.createElement('p');
     sign.innerHTML = '<b>Sign:</b> ' + otherinfo.sign;
-    sign.style.marginTop='1px';
-    sign.style.marginBottom='1px';
+    sign.className='sidebar-item';
     otherDiv.appendChild(sign);
   }
 
   if(otherinfo.ante!=''){
     let ante = document.createElement('p');
     ante.innerHTML = '<b>Date (ante):</b> ' + otherinfo.ante;
-    ante.style.marginTop='1px';
-    ante.style.marginBottom='1px';
+    ante.className='sidebar-item';
     otherDiv.appendChild(ante);
   }
   if(otherinfo.post!=''){
     let post = document.createElement('p');
     post.innerHTML = '<b>Date (post):</b> ' + otherinfo.post;
-    post.style.marginTop='1px';
-    post.style.marginBottom='1px';
+    post.className='sidebar-item';
     otherDiv.appendChild(post);
   }
   if(otherinfo.link_to_digital!=''){
     let link_to_digital = document.createElement('p');
     link_to_digital.innerHTML = '<b>Link to digital copy:</b> ' + otherinfo.link_to_digital;
-    link_to_digital.style.marginTop='1px';
-    link_to_digital.style.marginBottom='1px';
+    link_to_digital.className='sidebar-item';
     otherDiv.appendChild(link_to_digital);
   }
   if(otherinfo.pressmark!='' || otherinfo.sign!='' || otherinfo.ante!=null || otherinfo.post!=null || otherinfo.link_to_digital!=''){
     sidebarContent.appendChild(otherDiv);
   }
   let bodyDiv=document.createElement('div');
-  bodyDiv.className=('sidebar-div');
-  bodyDiv.style.marginBottom='15px';
+  bodyDiv.className='sidebar-div';
 
   let bodyTitle = document.createElement('p');
-  bodyTitle.className=('sidebar-subtitle');
+  bodyTitle.className='sidebar-subtitle';
   bodyTitle.innerHTML = '<i class="fas fa-pencil-alt"></i> ' + 'NOTES';
-  bodyTitle.style.fontWeight='bold';
-  bodyTitle.style.fontSize='120%';
-  bodyTitle.style.marginBottom='2px';
   bodyDiv.appendChild(bodyTitle);
 
   if(otherinfo.body!=''){
     let notes = document.createElement('p');
     notes.innerHTML = '<b>Note:</b> ' + otherinfo.body;
-    notes.style.marginTop='1px';
-    notes.style.marginBottom='1px';
+    notes.className='sidebar-item';
     bodyDiv.appendChild(notes);
     sidebarContent.appendChild(bodyDiv);
   }
@@ -910,59 +816,35 @@ if(markertype=="person"){
     }
   }
   var place_of_origin=thisperson.place;
-/*  var birth_date=thisperson.birth_date;
-  var death_date=thisperson.death_date;
-  if(birth_date!=null){
-    var db = String(birth_date.getDate()).padStart(2, '0');
-    var mb = String(birth_date.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yb = birth_date.getFullYear();
-
-    birth_date = db + '/' + mb + '/' + yb;
-  } else {birth_date='';}
-
-  if(death_date!=null){
-    var dd = String(death_date.getDate()).padStart(2, '0');
-    var md = String(death_date.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yd = death_date.getFullYear();
-
-    death_date = dd + '/' + md + '/' + yd;
-  } else { death_date='';}
-  */
 
  /* general information */
   let generalDiv=document.createElement('div');
-  generalDiv.className=('sidebar-div');
-  generalDiv.style.marginBottom='15px';
+  generalDiv.className='sidebar-div';
+
   let generalTitle = document.createElement('p');
-  generalTitle.className=('sidebar-subtitle');
+  generalTitle.className='sidebar-subtitle';
   generalTitle.innerHTML = '<i class="fas fa-info-circle"></i> '+'GENERAL INFORMATION';
-  generalTitle.style.fontWeight='bold';
-  generalTitle.style.fontSize='120%';
-  generalTitle.style.marginBottom='2px';
   generalDiv.appendChild(generalTitle);
 
     /* senhal */
   if(otherinfo.senhal!=null){
     let senhal = document.createElement('p');
     senhal.innerHTML = '<b>Senhal:</b> ' + otherinfo.senhal;
-    senhal.style.marginTop='1px';
-    senhal.style.marginBottom='1px';
+    senhal.className='sidebar-item';
     generalDiv.appendChild(senhal);
   }
 
     /* type */
   let persontype = document.createElement('p');
   persontype.innerHTML = '<b>Type:</b> ' + otherinfo.persontype;
-  persontype.style.marginTop='1px';
-  persontype.style.marginBottom='1px';
+  persontype.className='sidebar-item';
   generalDiv.appendChild(persontype);
 
     /*language*/
   languagearray.forEach( item =>{
     let language = document.createElement('p');
     language.innerHTML = '<b>Language:</b> ' + item;
-    language.style.marginTop='1px';
-    language.style.marginBottom='1px';
+    language.className='sidebar-item';
     generalDiv.appendChild(language);
   })
 
@@ -971,35 +853,28 @@ if(markertype=="person"){
   /*place and time*/
 
   let placedateDiv=document.createElement('div');
-  placedateDiv.className=('sidebar-div');
-  placedateDiv.style.marginBottom='15px';
+  placedateDiv.className='sidebar-div';
 
   let placedateTitle = document.createElement('p');
-  placedateTitle.className=('sidebar-subtitle');
+  placedateTitle.className='sidebar-subtitle';
   placedateTitle.innerHTML = '<i class="fas fa-globe"></i> '+'ORIGIN';
-  placedateTitle.style.fontWeight='bold';
-  placedateTitle.style.fontSize='120%';
-  placedateTitle.style.marginBottom='2px';
   placedateDiv.appendChild(placedateTitle);
 
   let placeinfo = document.createElement('p');
   placeinfo.innerHTML = '<b>Place of birth:</b> ' + place_of_origin;
-  placeinfo.style.marginTop='1px';
-  placeinfo.style.marginBottom='1px';
+  placeinfo.className='sidebar-item';
   placedateDiv.appendChild(placeinfo);
 
   if(otherinfo.birth_date_string!=''){
     let birthdateinfo = document.createElement('p');
     birthdateinfo.innerHTML = '<b>Date of birth:</b> ' + otherinfo.birth_date_string;
-    birthdateinfo.style.marginTop='1px';
-    birthdateinfo.style.marginBottom='1px';
+    birthdateinfo.className='sidebar-item';
     placedateDiv.appendChild(birthdateinfo);
   }
   if(otherinfo.death_date_string!=''){
     let deathdateinfo = document.createElement('p');
     deathdateinfo.innerHTML = '<b>Date of death:</b> ' + otherinfo.death_date_string;
-    deathdateinfo.style.marginTop='1px';
-    deathdateinfo.style.marginBottom='1px';
+    deathdateinfo.className='sidebar-item';
     placedateDiv.appendChild(deathdateinfo);
   }
 
@@ -1008,15 +883,11 @@ if(markertype=="person"){
   /* relatives */
 
   let relativeDiv=document.createElement('div');
-  relativeDiv.className=('sidebar-div');
-  relativeDiv.style.marginBottom='15px';
+  relativeDiv.className='sidebar-div';
 
   let relativeTitle = document.createElement('p');
-  relativeTitle.className=('sidebar-subtitle');
+  relativeTitle.className='sidebar-subtitle';
   relativeTitle.innerHTML = '<i class="fas fa-users"></i> ' + 'RELATIONSHIPS';
-  relativeTitle.style.fontWeight='bold';
-  relativeTitle.style.fontSize='120%';
-  relativeTitle.style.marginBottom='2px';
   relativeDiv.appendChild(relativeTitle);
 
   if(relativearray!=''){
@@ -1035,11 +906,9 @@ if(markertype=="person"){
         linkid=item.root;
         relative.innerHTML = '<b>Related to:</b> ' + item.rootname + ' ' + item.rootsurname+ ' (son/daughter)';
       }
-      relative.className='sidebar-link';
+      relative.className='sidebar-item sidebar-link';
       relative.markerID=linkid;
       relative.type="person";
-      relative.style.marginTop='1px';
-      relative.style.marginBottom='1px';
       relative.addEventListener('click', onMarkerClick);
       relativeDiv.appendChild(relative);
     })
@@ -1049,15 +918,11 @@ if(markertype=="person"){
   /* authorship */
 
   let authorshipDiv=document.createElement('div');
-  authorshipDiv.className=('sidebar-div');
-  authorshipDiv.style.marginBottom='15px';
+  authorshipDiv.className='sidebar-div';
 
   let authorshipTitle = document.createElement('p');
-  authorshipTitle.className=('sidebar-subtitle');
+  authorshipTitle.className='sidebar-subtitle';
   authorshipTitle.innerHTML = '<i class="fas fa-book-open"></i> ' + 'AUTHORSHIP';
-  authorshipTitle.style.fontWeight='bold';
-  authorshipTitle.style.fontSize='120%';
-  authorshipTitle.style.marginBottom='2px';
   authorshipDiv.appendChild(authorshipTitle);
 
   if(otherinfo.persontype=='author' && authorshiparray!=''){
@@ -1069,11 +934,9 @@ if(markertype=="person"){
       else{
         thiswork.innerHTML = '<b>Work:</b> ' + item.incipit + ' ' + ' ('+ item.authortype +')';
       }
-      thiswork.className='sidebar-link';
+      thiswork.className='sidebar-item sidebar-link';
       thiswork.markerID=item.workid;
       thiswork.type="work";
-      thiswork.style.marginTop='1px';
-      thiswork.style.marginBottom='1px';
       thiswork.addEventListener('click', onMarkerClick);
       authorshipDiv.appendChild(thiswork);
     })
@@ -1082,46 +945,38 @@ if(markertype=="person"){
 
   /*other information*/
   let otherDiv=document.createElement('div');
-  otherDiv.className=('sidebar-div');
-  otherDiv.style.marginBottom='15px';
+  otherDiv.className='sidebar-div';
 
   let otherTitle = document.createElement('p');
-  otherTitle.className=('sidebar-subtitle');
+  otherTitle.className='sidebar-subtitle';
   otherTitle.innerHTML = '<i class="far fa-sticky-note"></i> ' + 'OTHER INFORMATION';
-  otherTitle.style.fontWeight='bold';
-  otherTitle.style.fontSize='120%';
-  otherTitle.style.marginBottom='2px';
   otherDiv.appendChild(otherTitle);
 
   if(otherinfo.birth_ante!=''){
     let birth_ante = document.createElement('p');
     birth_ante.innerHTML = '<b>Birth date (ante):</b> ' + otherinfo.birth_ante;
-    birth_ante.style.marginTop='1px';
-    birth_ante.style.marginBottom='1px';
+    birth_ante.className='sidebar-item';
     otherDiv.appendChild(birth_ante);
   }
 
   if(otherinfo.birth_post!=''){
     let birth_post = document.createElement('p');
     birth_post.innerHTML = '<b>Birth date (post):</b> ' + otherinfo.birth_post;
-    birth_post.style.marginTop='1px';
-    birth_post.style.marginBottom='1px';
+    birth_post.className='sidebar-item';
     otherDiv.appendChild(birth_post);
   }
 
   if(otherinfo.death_ante!=''){
     let death_ante = document.createElement('p');
     death_ante.innerHTML = '<b>Death date (ante):</b> ' + otherinfo.death_ante;
-    death_ante.style.marginTop='1px';
-    death_ante.style.marginBottom='1px';
+    death_ante.className='sidebar-item';
     otherDiv.appendChild(death_ante);
   }
 
   if(otherinfo.death_post!=''){
     let death_post = document.createElement('p');
     death_post.innerHTML = '<b>Death date (post):</b> ' + otherinfo.death_post;
-    death_post.style.marginTop='1px';
-    death_post.style.marginBottom='1px';
+    death_post.className='sidebar-item';
     otherDiv.appendChild(death_post);
   }
 
@@ -1132,28 +987,22 @@ if(markertype=="person"){
   /* notes */
 
   let bodyDiv=document.createElement('div');
-  bodyDiv.className=('sidebar-div');
-  bodyDiv.style.marginBottom='15px';
+  bodyDiv.className='sidebar-div';
 
   let bodyTitle = document.createElement('p');
-  bodyTitle.className=('sidebar-subtitle');
+  bodyTitle.className='sidebar-subtitle';
   bodyTitle.innerHTML = '<i class="fas fa-pencil-alt"></i> ' + 'NOTES';
-  bodyTitle.style.fontWeight='bold';
-  bodyTitle.style.fontSize='120%';
-  bodyTitle.style.marginBottom='2px';
   bodyDiv.appendChild(bodyTitle);
 
   if(otherinfo.body!=''){
     let notes = document.createElement('p');
     notes.innerHTML = '<b>Note:</b> ' + otherinfo.body;
-    notes.style.marginTop='1px';
-    notes.style.marginBottom='1px';
+    notes.className='sidebar-item';
     bodyDiv.appendChild(notes);
     sidebarContent.appendChild(bodyDiv);
   }
 }
 /* ACTIVITY JS*/
-
 
 /* people involved */
 if(markertype=='activity'){
@@ -1164,47 +1013,20 @@ if(markertype=='activity'){
       break;
     }
   }
-/*  var start_ante=thisactivity.start_ante;
-  var end_date=thisactivity.end_date;
-  var start_date=thisactivity.start_date;
-
-  var dd = String(start_date.getDate()).padStart(2, '0');
-  var mm = String(start_date.getMonth() + 1).padStart(2, '0'); //January is 0!
-  var yy= start_date.getFullYear();
-
-  start_date = dd + '/' + mm + '/' + yy;
-
-  if(isNaN(end_date.getTime())){
-    end_date='';
-  }
-  else{
-    var dd = String(end_date.getDate()).padStart(2, '0');
-    var md = String(end_date.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yd = end_date.getFullYear();
-
-    end_date = dd + '/' + md + '/' + yd;
-  }
-*/
 
   let peopleDiv=document.createElement('div');
-  peopleDiv.className=('sidebar-div');
-  peopleDiv.style.marginBottom='15px';
+  peopleDiv.className='sidebar-div';
 
   let peopleTitle = document.createElement('p');
-  peopleTitle.className=('sidebar-subtitle');
+  peopleTitle.className='sidebar-subtitle';
   peopleTitle.innerHTML = '<i class="fas fa-users"></i> ' + 'PEOPLE INVOLVED';
-  peopleTitle.style.fontWeight='bold';
-  peopleTitle.style.fontSize='120%';
-  peopleTitle.style.marginBottom='2px';
   peopleDiv.appendChild(peopleTitle);
 
   let personinvolved = document.createElement('p');
   personinvolved.innerHTML = '<b>Person:</b> ' + personinfo.personname + ' '+ personinfo.surname;
-  personinvolved.className='sidebar-link';
+  personinvolved.className='sidebar-item sidebar-link';
   personinvolved.markerID=personinfo.personid;
   personinvolved.type="person";
-  personinvolved.style.marginTop='1px';
-  personinvolved.style.marginBottom='1px';
   personinvolved.addEventListener('click', onMarkerClick);
   peopleDiv.appendChild(personinvolved);
 
@@ -1213,104 +1035,73 @@ if(markertype=='activity'){
   /*place and time*/
 
   let placedateDiv=document.createElement('div');
-  placedateDiv.className=('sidebar-div');
-  placedateDiv.style.marginBottom='15px';
+  placedateDiv.className='sidebar-div';
 
   let placedateTitle = document.createElement('p');
-  placedateTitle.className=('sidebar-subtitle');
+  placedateTitle.className='sidebar-subtitle';
   placedateTitle.innerHTML = '<i class="fas fa-globe"></i> '+'PLACE AND TIME';
-  placedateTitle.style.fontWeight='bold';
-  placedateTitle.style.fontSize='120%';
-  placedateTitle.style.marginBottom='2px';
   placedateDiv.appendChild(placedateTitle);
 
   let placeinfo = document.createElement('p');
   placeinfo.innerHTML = '<b>Place:</b> ' + thisactivity.place;
-  placeinfo.style.marginTop='1px';
-  placeinfo.style.marginBottom='1px';
+  placeinfo.className='sidebar-item';
   placedateDiv.appendChild(placeinfo);
 
   let startdateinfo = document.createElement('p');
   startdateinfo.innerHTML = '<b>Start date:</b> ' + otherinfo.start_date_string;
-  startdateinfo.style.marginTop='1px';
-  startdateinfo.style.marginBottom='1px';
+  startdateinfo.className='sidebar-item';
   placedateDiv.appendChild(startdateinfo);
 
   if(otherinfo.start_ante!=''){
     let startante = document.createElement('p');
     startante.innerHTML = '<b>Start date (ante):</b> ' + otherinfo.start_ante;
-    startante.style.marginTop='1px';
-    startante.style.marginBottom='1px';
+    startante.className='sidebar-item';
     placedateDiv.appendChild(startante);
   }
   if(otherinfo.start_post!=''){
     let startpost = document.createElement('p');
     startpost.innerHTML = '<b>Start date (ante):</b> ' + otherinfo.start_post;
-    startpost.style.marginTop='1px';
-    startpost.style.marginBottom='1px';
+    startpost.className='sidebar-item';
     placedateDiv.appendChild(startpost);
   }
   if(otherinfo.end_date_string!=''){
     let enddateinfo = document.createElement('p');
     enddateinfo.innerHTML = '<b>End date:</b> ' + otherinfo.end_date_string;
-    enddateinfo.style.marginTop='1px';
-    enddateinfo.style.marginBottom='1px';
+    enddateinfo.className='sidebar-item';
     placedateDiv.appendChild(enddateinfo);
   }
   if(otherinfo.end_ante!=''){
     let endante = document.createElement('p');
     endante.innerHTML = '<b>Start date (ante):</b> ' + otherinfo.end_ante;
-    endante.style.marginTop='1px';
-    endante.style.marginBottom='1px';
+    endante.className='sidebar-item';
     placedateDiv.appendChild(endante);
   }
   if(otherinfo.end_post!=''){
     let endpost = document.createElement('p');
     endpost.innerHTML = '<b>Start date (ante):</b> ' + otherinfo.end_post;
-    endpost.style.marginTop='1px';
-    endpost.style.marginBottom='1px';
+    endpost.className='sidebar-item';
     placedateDiv.appendChild(endpost);
   }
-
 
   sidebarContent.appendChild(placedateDiv);
 
   /* notes */
 
   let bodyDiv=document.createElement('div');
-  bodyDiv.className=('sidebar-div');
-  bodyDiv.style.marginBottom='15px';
+  bodyDiv.className='sidebar-div';
 
   let bodyTitle = document.createElement('p');
-  bodyTitle.className=('sidebar-subtitle');
+  bodyTitle.className='sidebar-subtitle';
   bodyTitle.innerHTML = '<i class="fas fa-pencil-alt"></i> ' + 'NOTES';
-  bodyTitle.style.fontWeight='bold';
-  bodyTitle.style.fontSize='120%';
-  bodyTitle.style.marginBottom='2px';
   bodyDiv.appendChild(bodyTitle);
 
   if(body!=''){
     let notes = document.createElement('p');
     notes.innerHTML = '<b>Note:</b> ' + body;
-    notes.style.marginTop='1px';
-    notes.style.marginBottom='1px';
+    notes.className='sidebar-item';
     bodyDiv.appendChild(notes);
     sidebarContent.appendChild(bodyDiv);
   }
 }
-/*
-  let workicon=
-if(markertype=="work"){
-  let languageDiv=document.createElement('div');
-  let languageInfo=document.createElement('p');
-  languageInfo.innerHTML='<b>Language: </b>' + workinformation.language;
-  languageDiv.appendChild(languageInfo);
-  sidebarContent.appendChild(languageDiv);
-
-  let placeDiv=document.createElement('div');
-  let placeInfo=document.createElement('p');
-  placeInfo.innerHTML='<b>Place of composition: </b>' + workinformation.place_of_composition;
-  placeDiv.appendChild(placeInfo);
-  sidebarContent.appendChild(placeDiv); */
 
 </script>

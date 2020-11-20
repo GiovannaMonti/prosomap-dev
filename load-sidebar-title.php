@@ -1,14 +1,6 @@
 
 <?php
 
-/* A questo file io passo con ajax solo l'id e il type. In base al type saprò quali saranno i campi della sidebar.
-  Costruisco quindi in questo file il contenuto specifico facendo query al database (servirà una connessione in questo file).
-  Anzi in realtà per ogni sezione della sidebar dorò chiamare in index un load per quello specifico div. A ogni load corrisp
-  un file come questo con il caricamento dei dati.
-
-
-
- */
   $type=$_POST['type'];
   $id="";
   if($type!="about"){

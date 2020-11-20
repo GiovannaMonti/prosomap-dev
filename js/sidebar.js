@@ -1,14 +1,14 @@
 /* creating the sidebar*/
 
   var sidebar = L.control.sidebar('sidebar', {
-      closeButton: false,
-      position: 'left'
+    closeButton: false,
+    position: 'left'
   });
   mymap.addControl(sidebar);
 
 /* closing sidebar (2 ways) */
   mymap.on('click', function () {
-      sidebar.hide();
+    sidebar.hide();
   });
 
   var sidebarX=document.getElementById("sidebarX");

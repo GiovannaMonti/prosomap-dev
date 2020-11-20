@@ -3,7 +3,6 @@
 var timeline;
 var timelineinfo=[];
 
-
 function initializeTimeline(){
   var container = document.getElementById('visualization');
   var workmarker={};
@@ -92,8 +91,8 @@ function initializeTimeline(){
   let minYear=minDate.getFullYear();
   let minMargin=new Date(minYear-100, 11, 31);
 
-
   timelineitems = new vis.DataSet(timelineinfo);
+
   // Configuration for the Timeline
   var options = {
     stack: false,
@@ -104,11 +103,12 @@ function initializeTimeline(){
     timeAxis: {scale: 'year', step: 50},
     snap: null
   };
+
   // Create a Timeline
   timeline = new vis.Timeline(container, timelineitems, options);
   timeline.setGroups(groups);
   timeline.addCustomTime(new Date(1250, 01, 01), 'customtime');
-  timeline.addEventListener('timechange', displayTimeMarkers);
+  timeline.addEventListener('timechange', displayTimeMarkers); //when the custom time bar is dragged it triggers the function
 
 }
 
