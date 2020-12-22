@@ -82,14 +82,16 @@ function initializeTimeline(){
   });
   let maxDate= maxDateObj.start;
   let maxYear=maxDate.getFullYear();
-  let maxMargin=new Date(maxYear+100, 11, 31);
+  let maxMargin=new Date(maxYear+100, 12, 31);
 
   let minDateObj = timelineinfo.reduce(function (x, y) {
       return x.start < y.start ? x : y;
   });
   let minDate= minDateObj.start;
   let minYear=minDate.getFullYear();
-  let minMargin=new Date(minYear-100, 11, 31);
+  let minMargin=new Date(minYear-100, 12, 31);
+
+  var middleDate= new Date((minMargin.getTime() + maxMargin.getTime()) / 2);
 
   timelineitems = new vis.DataSet(timelineinfo);
 
@@ -107,7 +109,7 @@ function initializeTimeline(){
   // Create a Timeline
   timeline = new vis.Timeline(container, timelineitems, options);
   timeline.setGroups(groups);
-  timeline.addCustomTime(new Date(1250, 01, 01), 'customtime');
+  timeline.addCustomTime(middleDate, 'customtime');
   timeline.addEventListener('timechange', displayTimeMarkers); //when the custom time bar is dragged it triggers the function
 
 }

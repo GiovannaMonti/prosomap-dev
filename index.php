@@ -31,13 +31,12 @@
   <link rel="stylesheet" href="http://turbo87.github.io/leaflet-sidebar/src/L.Control.Sidebar.css">
   <!-- FONTAWESOME + AWESOMEMARKERS-->
   <script src="https://kit.fontawesome.com/eda5598d52.js" crossorigin="anonymous"></script>
-  <!-- GOOGLE FONT -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Volkhov">
-  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+  <!-- GOOGLE FONT -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Volkhov">
   <!-- MARKERCLUSTER -->
   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
@@ -56,11 +55,11 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="index.php">ProsoMap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav"> <!-- elementi della navbar che vengono collassati nell'ham menu -->
-        <ul class="navbar-nav ml-auto"> <!-- ml-auto to align menu elements to the right -->
+      <div class="collapse navbar-collapse" id="navbarNav"> --><!-- elementi della navbar che vengono collassati nell'ham menu -->
+        <!--<ul class="navbar-nav ml-auto"> --> <!-- ml-auto to align menu elements to the right -->
           <li class="nav-item">
             <a class="nav-link" id="about" href="#"><i class="fas fa-info-circle"></i> About</a>
           </li>
@@ -71,7 +70,7 @@
   <!-- END NAVBAR -->
 
   <!-- PAGE CONTENT -->
-
+  
   <div id="container">
     <!-- MAP -->
     <div id="mapid" >

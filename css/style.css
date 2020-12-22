@@ -15,19 +15,23 @@ body{
   position: relative;
   height: 95vh;
 }
-
+.nav-item{
+  list-style: none;
+}
+#about{
+  text-decoration: none;
+  color: #949494;
+}
+#about:hover{
+  transition-duration: 0.5s;
+  color: #4d4d4d;
+}
 #mapid{
   position: absolute;
   height: 80%;
   width: 100%;
 }
 
-#visualization {
-  top: 80%;
-  width: 100%;
-  border: 1px solid lightgray;
-
-}
 /* SIDEBAR */
 #sidebar-content{
   color: #01265E;
@@ -60,6 +64,11 @@ body{
 }
 /* END SIDEBAR */
 /* TIMELINE */
+#visualization {
+  top: 80%;
+  width: 100%;
+  border: 1px solid lightgray;
+
 }
 .vis-custom-time {
     background-color: #1b4c88 !important;
@@ -81,8 +90,29 @@ body{
 }
 .vis-labelset .vis-label .fas{
   color: white !important;
-
+}
+.vis-time-axis .vis-text {
+  font-size: 85%;
+}
+@media screen and (max-width: 525px) {
+  .vis-time-axis .vis-text {
+    font-size: 85%;
+    writing-mode: vertical-lr;
+  }
+}
 /* END TIMELINE */
+/* reset button positioning */
+@media screen and (max-width: 555px) {
+  .leaflet-bottom .btn{
+    transform: translate(0, -30%);
+  }
+}
+@media screen and (max-width: 423px) {
+  .leaflet-bottom .btn{
+    transform: translate(0, -70%);
+  }
+}
+
 
 /*
 .leaflet-full-height{

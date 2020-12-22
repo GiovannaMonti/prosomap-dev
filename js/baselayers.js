@@ -96,7 +96,7 @@ function getBaseLayers(){
 
   /* adding category 'Sources' */
   //categories.Sources=sourcelayer;
-  
+
   /* adding all categories to map*/
 //  L.control.layers({}, categories, false).addTo(mymap);
 
@@ -204,6 +204,7 @@ L.Control.ResetMap = L.Control.extend({
     var reset = L.DomUtil.create('button');
     reset.textContent = 'RESET MAP';
     reset.className= 'btn btn-dark';
+    reset.id='reset-button';
     reset.style.fontFamily = 'Volkhov';
     reset.addEventListener('click', resetMap);
     return reset;
