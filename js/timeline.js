@@ -25,7 +25,7 @@ function initializeTimeline(){
   for(i=0; i<workarray.length; i++){
     workmarker={
       id: workarray[i].work_id,
-      content: workarray[i].title,
+      title: workarray[i].title,
       group: 'group0',
       type: 'point',
       style: 'font-size: 0%',
@@ -38,7 +38,7 @@ function initializeTimeline(){
   for(i=0; i<sourcearray.length; i++){
     sourcemarker={
       id: sourcearray[i].source_id,
-      content: sourcearray[i].name,
+      title: sourcearray[i].sourcename,
       group: 'group1',
       type: 'point',
       style: 'font-size: 0%',
@@ -51,7 +51,7 @@ function initializeTimeline(){
   for(i=0; i<personarray.length; i++){
     personmarker={
       id: personarray[i].person_id,
-      content: personarray[i].personname + ' ' + personarray[i].surname,
+      title: personarray[i].personname + ' ' + personarray[i].surname,
       group: 'group2',
       type: 'point',
       style: 'font-size: 0%',
@@ -65,7 +65,7 @@ function initializeTimeline(){
   for(i=0; i<activityarray.length; i++){
     activitymarker={
       id: activityarray[i].activity_id,
-      content: activityarray[i].description,
+      title: activityarray[i].description,
       group: 'group3',
       type: 'point',
       style: 'font-size: 0%',
