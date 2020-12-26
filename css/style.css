@@ -1,14 +1,5 @@
-html{
-  position: relative;
-}
-
 body{
   font-family: Volkhov !important;
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
 }
 
 #container{
@@ -68,6 +59,7 @@ body{
   top: 80%;
   width: 100%;
   border: 1px solid lightgray;
+  z-index: 100000;
 
 }
 .vis-custom-time {

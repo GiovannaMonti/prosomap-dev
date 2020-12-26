@@ -29,9 +29,7 @@ function initializeTimeline(){
       group: 'group0',
       type: 'point',
       style: 'font-size: 0%',
-      start: workarray[i].date,
-      zoomMax: 15778476000000,
-      zoomMin: 15778476000000
+      start: workarray[i].date
     }
     timelineinfo.push(workmarker);
   }
@@ -42,9 +40,7 @@ function initializeTimeline(){
       group: 'group1',
       type: 'point',
       style: 'font-size: 0%',
-      start: sourcearray[i].date,
-      zoomMax: 15778476000000,
-      zoomMin: 15778476000000
+      start: sourcearray[i].date
     }
     timelineinfo.push(sourcemarker);
   }
@@ -56,9 +52,7 @@ function initializeTimeline(){
       type: 'point',
       style: 'font-size: 0%',
       start: personarray[i].birth_date,
-      end: personarray[i].death_date,
-      zoomMax: 15778476000000,
-      zoomMin: 15778476000000
+      end: personarray[i].death_date
     }
     timelineinfo.push(personmarker);
   }
@@ -70,9 +64,7 @@ function initializeTimeline(){
       type: 'point',
       style: 'font-size: 0%',
       start: activityarray[i].start_date,
-      end: activityarray[i].end_date,
-      zoomMax: 15778476000000,
-      zoomMin: 15778476000000
+      end: activityarray[i].end_date
     }
     timelineinfo.push(activitymarker);
   }
@@ -98,7 +90,7 @@ function initializeTimeline(){
   // Configuration for the Timeline
   var options = {
     stack: false,
-    maxHeight: '40%',
+    maxHeight: '300px',
     start: minMargin,
     end: maxMargin,
     moveable: false,
