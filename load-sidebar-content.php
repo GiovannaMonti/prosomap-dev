@@ -1095,9 +1095,9 @@ if(markertype=='activity'){
   bodyTitle.innerHTML = '<i class="fas fa-pencil-alt"></i> ' + 'NOTES';
   bodyDiv.appendChild(bodyTitle);
 
-  if(body!=''){
+  if(otherinfo.body!=''){
     let notes = document.createElement('p');
-    notes.innerHTML = '<b>Note:</b> ' + body;
+    notes.innerHTML = '<b>Note:</b> ' + otherinfo.body;
     notes.className='sidebar-item';
     bodyDiv.appendChild(notes);
     sidebarContent.appendChild(bodyDiv);
