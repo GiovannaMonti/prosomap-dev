@@ -1,10 +1,5 @@
 body{
-  font-family: Volkhov !important;
-}
-
-#container{
-  position: relative;
-  height: 95vh;
+  font-family: Volkhov;
 }
 .nav-item{
   list-style: none;
@@ -12,14 +7,14 @@ body{
 #about{
   text-decoration: none;
   color: #949494;
+  transition: all 0.5s ease;
 }
 #about:hover{
-  transition-duration: 0.5s;
   color: #4d4d4d;
 }
 #mapid{
-  position: absolute;
-  height: 80%;
+ /* position: absolute;*/
+  height: 80vh;
   width: 100%;
 }
 
@@ -56,32 +51,32 @@ body{
 /* END SIDEBAR */
 /* TIMELINE */
 #visualization {
-  top: 80%;
+  max-height: 40vh;
   width: 100%;
   border: 1px solid lightgray;
   z-index: 100000;
 
 }
 .vis-custom-time {
-    background-color: #1b4c88 !important;
+    background-color: #1b4c88;
 }
 .groupclass0{
-  background-color:	rgb(114, 176, 38, 0.5) !important;
+  background-color:	rgb(114, 176, 38, 0.5);
 }
 .groupclass1{
-  background-color: rgb(56, 170, 221, 0.5) !important;
+  background-color: rgb(56, 170, 221, 0.5);
 }
 .groupclass2{
-  background-color: rgb(214, 62, 42, 0.5) !important;
+  background-color: rgb(214, 62, 42, 0.5);
 }
 .groupclass3{
-  background-color: rgb(210, 82, 185, 0.5) !important;
+  background-color: rgb(210, 82, 185, 0.5);
 }
 .groupclass0 .vis-item .vis-dot, .groupclass1 .vis-item .vis-dot, .groupclass2 .vis-item .vis-dot, .groupclass3 .vis-item .vis-dot{
-  border-color:	#4d4d4d !important;
+  border-color:	#4d4d4d;
 }
 .vis-labelset .vis-label .fas{
-  color: white !important;
+  color: white;
 }
 .vis-time-axis .vis-text {
   font-size: 85%;
@@ -105,12 +100,3 @@ body{
   }
 }
 
-
-/*
-.leaflet-full-height{
-  flex-grow: 1 !important;
-}
-.btn-group.special {
-  display: flex;
-}
-*/

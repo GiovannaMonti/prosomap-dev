@@ -11,7 +11,7 @@ function initializeTimeline(){
   var activitymarker={};
   var timelineitems;
 
-  var groupnames = ['<i class="fas fa-book-open"></i> Works', '<i class="fas fa-scroll"></i> Sources', '<i class="fas fa-user"></i> People', '<i class="fas fa-chess-rook"></i> Activities'];
+  var groupnames = ['Works', 'Sources', 'People', 'Activities'];
   var groupCount=groupnames.length;
   var groups = new vis.DataSet();
   for (var g = 0; g < groupCount; g++) {

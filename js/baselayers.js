@@ -1,6 +1,5 @@
 /*GET AND DISPLAY BASE LAYERS (WORK, PERSON/AUTHOR, SOURCE, ACTIVITY)*/
 
-let placelayer;
 let workmarkers=[];
 let worklayer;
 let sourcemarkers=[];
@@ -10,7 +9,7 @@ let personlayer;
 let activitymarkers=[];
 let activitylayer;
 var clusteredmarkers;
-let categories = {};
+/* let categories = {}; */
 let layerControl;
 
 function getBaseLayers(){
@@ -177,10 +176,10 @@ for(var j=0; j<personarray.length; j++){
   activitylayer = L.layerGroup(activitymarkers);
 
   clusteredmarkers=L.markerClusterGroup();
-  worksubgroup=L.featureGroup.subGroup(clusteredmarkers, workmarkers);
-  sourcesubgroup=L.featureGroup.subGroup(clusteredmarkers, sourcemarkers);
-  personsubgroup=L.featureGroup.subGroup(clusteredmarkers, personmarkers);
-  activitysubgroup=L.featureGroup.subGroup(clusteredmarkers, activitymarkers);
+  let worksubgroup=L.featureGroup.subGroup(clusteredmarkers, workmarkers);
+  let sourcesubgroup=L.featureGroup.subGroup(clusteredmarkers, sourcemarkers);
+  let personsubgroup=L.featureGroup.subGroup(clusteredmarkers, personmarkers);
+  let activitysubgroup=L.featureGroup.subGroup(clusteredmarkers, activitymarkers);
   //clusteredmarkers.addLayer(worklayer);
   //clusteredmarkers.addLayer(sourcelayer);
   clusteredmarkers.addTo(mymap);

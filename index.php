@@ -6,8 +6,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to ProsoMap</title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -48,24 +46,25 @@
   <script src="js/timeline.js"></script>
   <!-- END JS FUNCTIONS -->
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.php">ProsoMap</a>
-      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav"> --><!-- elementi della navbar che vengono collassati nell'ham menu -->
-        <!--<ul class="navbar-nav ml-auto"> --> <!-- ml-auto to align menu elements to the right -->
-          <li class="nav-item">
-            <a class="nav-link" id="about" href="#"><i class="fas fa-info-circle"></i> About</a>
-          </li>
-        </ul>
-      </div>
-    </div> <!-- end container -->
+    <a class="navbar-brand" href="index.php">ProsoMap</a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav"> --><!-- elementi della navbar che vengono collassati nell'ham menu -->
+      <!--<ul class="navbar-nav ml-auto"> --> <!-- ml-auto to align menu elements to the right -->
+        <li class="nav-item">
+          <a class="nav-link" id="about" href="#"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+      </ul>
+    </div>
   </nav>
   <!-- END NAVBAR -->
 
