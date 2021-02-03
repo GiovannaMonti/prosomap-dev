@@ -74,14 +74,14 @@ function initializeTimeline(){
   });
   let maxDate= maxDateObj.start;
   let maxYear=maxDate.getFullYear();
-  let maxMargin=new Date(maxYear+100, 12, 31);
+  let maxMargin=new Date(maxYear+30, 12, 31);
 
   let minDateObj = timelineinfo.reduce(function (x, y) {
       return x.start < y.start ? x : y;
   });
   let minDate= minDateObj.start;
   let minYear=minDate.getFullYear();
-  let minMargin=new Date(minYear-100, 12, 31);
+  let minMargin=new Date(minYear-30, 12, 31);
 
   var middleDate= new Date((minMargin.getTime() + maxMargin.getTime()) / 2);
 
