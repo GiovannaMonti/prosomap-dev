@@ -5,7 +5,7 @@
 -- Dumped from database version 9.6.16
 -- Dumped by pg_dump version 12.2
 
--- Started on 2020-11-09 11:27:43
+-- Started on 2021-02-08 11:57:35
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -108,11 +108,11 @@ INSERT INTO public.place VALUES (26, 51.366669000000002, 7.483333, 'Hagen', 'Ger
 -- Data for Name: person; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.person VALUES (47, 'Giorgio', 'Rossi', '1170-07-26', '1250-03-04', NULL, 'author', 'Hsond sns dkindidnb sojoshdo sihiosn di di sisnnhdojd', '1170-07-26', '1250-03-04', NULL, NULL, 16, '26/07/1170', '04/03/1250');
 INSERT INTO public.person VALUES (48, 'Maria', 'Bianchi', '1246-02-21', '1297-08-11', NULL, 'author', NULL, NULL, NULL, NULL, NULL, 14, '21/02/1246', '11/08/1297');
-INSERT INTO public.person VALUES (49, 'Gerard', 'Valleise', '1214-10-15', '1250-11-18', NULL, 'author', NULL, NULL, NULL, NULL, NULL, 19, '15/10/1214', '18/11/1250');
 INSERT INTO public.person VALUES (50, 'Jonas', 'Kahnwald', '1320-12-24', '1410-12-30', NULL, 'author', NULL, NULL, NULL, NULL, NULL, 26, '24/12/1320', '30/12/1410');
-INSERT INTO public.person VALUES (51, 'Pablo', 'Adelan', '1157-10-11', '1232-11-28', NULL, 'author', NULL, NULL, NULL, NULL, NULL, 21, '11/10/1157', '28/11/1232');
+INSERT INTO public.person VALUES (47, 'Giorgio', 'Rossi', '1170-07-26', '1250-03-04', NULL, 'author', 'Donec scelerisque ut nulla nec posuere', '1170-07-26', '1250-03-04', NULL, NULL, 16, '26/07/1170', '04/03/1250');
+INSERT INTO public.person VALUES (49, 'Gerard', 'Valleise', '1214-10-15', '1250-11-18', 'Enim', 'author', NULL, NULL, NULL, NULL, NULL, 19, '15/10/1214', '18/11/1250');
+INSERT INTO public.person VALUES (51, 'Pablo', 'Adelan', '1157-10-11', '1232-11-28', NULL, 'author', 'ultricies lacinia', NULL, NULL, NULL, NULL, 21, '11/10/1157', '28/11/1232');
 
 
 --
@@ -160,12 +160,12 @@ INSERT INTO public.language VALUES (5, 'German');
 -- Data for Name: work; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.work VALUES (27, 'Awoshnfwv kbvtxrxgh', 'Bao skndib aknsdaid', '68', '1200-12-31', '1200-12-31', '1200-12-31', NULL, NULL, NULL, 'skndkjbd sibd ebdekldno', 2, 6, 15, '1200');
-INSERT INTO public.work VALUES (28, 'Jdnownf', 'Gsbdo skfn', '94', '1305-12-31', '1305-12-31', '1305-12-31', NULL, NULL, NULL, NULL, 2, 12, 13, '31/12/1305');
-INSERT INTO public.work VALUES (29, 'Kohebsinbc', 'Usibfsf sfkbs kifbk', '54', '1450-12-31', '1450-12-31', '1450-12-31', NULL, NULL, NULL, NULL, 1, 6, 18, '1450');
-INSERT INTO public.work VALUES (30, 'Ydwnk', 'Hdnid seondso', '84', '1215-12-31', '1215-12-31', '1215-12-31', NULL, NULL, NULL, NULL, 4, 7, 20, '1215');
-INSERT INTO public.work VALUES (31, 'Boahdb', 'Kwnsod dihid', '23', '1195-12-31', '1195-12-31', '1195-12-31', NULL, NULL, NULL, NULL, 5, 8, 23, '31/12/1195');
-INSERT INTO public.work VALUES (32, 'Ssdbksbfk', 'Joshdbsnkoe kmd', '9', '1183-12-31', '1183-12-31', '1183-12-31', NULL, NULL, NULL, NULL, 5, 9, 25, '1183');
+INSERT INTO public.work VALUES (27, 'Lorem ipsum', 'Dolor sit amet', '68', '1200-12-31', '1200-12-31', '1200-12-31', NULL, NULL, NULL, 'quisquam est qui dolorem ipsum quia dolor sit amet', 2, 6, 15, '1200');
+INSERT INTO public.work VALUES (28, 'Fusce vehicula', 'Curabitur eleifend molestie urna', '94', '1305-12-31', '1305-12-31', '1305-12-31', NULL, NULL, NULL, NULL, 2, 12, 13, '31/12/1305');
+INSERT INTO public.work VALUES (29, 'Imperdiet commodo', 'Aliquam eget libero commodo', '54', '1450-12-31', '1450-12-31', '1450-12-31', NULL, NULL, NULL, NULL, 1, 6, 18, '1450');
+INSERT INTO public.work VALUES (30, 'Suspendisse eu fringilla', 'Scelerisque volutpat', '84', '1215-12-31', '1215-12-31', '1215-12-31', NULL, NULL, NULL, NULL, 4, 7, 20, '1215');
+INSERT INTO public.work VALUES (31, 'Justo', 'Fusce quis felis', '23', '1195-12-31', '1195-12-31', '1195-12-31', NULL, NULL, NULL, NULL, 5, 8, 23, '31/12/1195');
+INSERT INTO public.work VALUES (32, 'Donec id', 'Quis sit amet velit', '9', '1183-12-31', '1183-12-31', '1183-12-31', NULL, NULL, NULL, NULL, 5, 9, 25, '1183');
 
 
 --
@@ -174,7 +174,7 @@ INSERT INTO public.work VALUES (32, 'Ssdbksbfk', 'Joshdbsnkoe kmd', '9', '1183-1
 -- Data for Name: alternative_incipit; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.alternative_incipit VALUES (46, 'Fsoandb wjkd wddaq', 27);
+INSERT INTO public.alternative_incipit VALUES (46, 'Fusce quis felis a purus consequat dignissim quis sit amet velit', 27);
 
 
 --
@@ -183,8 +183,8 @@ INSERT INTO public.alternative_incipit VALUES (46, 'Fsoandb wjkd wddaq', 27);
 -- Data for Name: alternative_title; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.alternative_title VALUES (45, 'Hwos bi', 27);
-INSERT INTO public.alternative_title VALUES (63, 'Goasns donbd sonsond', 27);
+INSERT INTO public.alternative_title VALUES (45, 'Curabitur eleifend molestie urna', 27);
+INSERT INTO public.alternative_title VALUES (63, 'Cras luctus, diam ut iaculis placerat', 27);
 
 
 --
@@ -242,12 +242,12 @@ INSERT INTO public.citation VALUES (27, 47);
 -- Data for Name: source; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.source VALUES (57, 'Awoshnfwv', 'manuscript', '97', 'jbkgbo', '1232-12-31', '1232-12-31', '1232-12-31', NULL, NULL, '31/12/1232');
-INSERT INTO public.source VALUES (58, 'Jdnownf', 'manuscript', '92', 'oajan', '1305-12-31', '1305-12-31', '1305-12-31', NULL, NULL, '31/12/1305');
-INSERT INTO public.source VALUES (59, 'Kohebsinbc', 'printed', '32', 'odhiwsbf', '1450-12-31', '1450-12-31', '1450-12-31', NULL, NULL, '1450');
-INSERT INTO public.source VALUES (60, 'Ydwnk', 'printed', '76', 'abfoe', '1215-12-31', '1215-12-31', '1215-12-31', NULL, NULL, '1215');
-INSERT INTO public.source VALUES (61, 'Boahdb', 'manuscript', '123', 'soajncd', '1195-12-31', '1195-12-31', '1195-12-31', NULL, NULL, '1195');
-INSERT INTO public.source VALUES (62, 'Ssdbksbfk', 'manuscript', '12', 'oihojcb', '1183-12-31', '1183-12-31', '1183-12-31', NULL, NULL, '1183');
+INSERT INTO public.source VALUES (57, 'Lorem ipsum', 'manuscript', '97', 'interdum', '1232-12-31', '1232-12-31', '1232-12-31', NULL, NULL, '31/12/1232');
+INSERT INTO public.source VALUES (58, 'Fusce vehicula', 'manuscript', '92', 'dapibus', '1305-12-31', '1305-12-31', '1305-12-31', 'Etiam dapibus ex at nisi gravida posuere', NULL, '31/12/1305');
+INSERT INTO public.source VALUES (59, 'Imperdiet commodo', 'printed', '32', 'finibus', '1450-12-31', '1450-12-31', '1450-12-31', NULL, NULL, '1450');
+INSERT INTO public.source VALUES (60, 'Suspendisse eu fringilla', 'printed', '76', 'facilisis', '1215-12-31', '1215-12-31', '1215-12-31', NULL, NULL, '1215');
+INSERT INTO public.source VALUES (61, 'Justo', 'manuscript', '123', 'enim', '1195-12-31', '1195-12-31', '1195-12-31', 'non commodo libero tincidunt', NULL, '1195');
+INSERT INTO public.source VALUES (62, 'Donec id', 'manuscript', '12', 'accumsan', '1183-12-31', '1183-12-31', '1183-12-31', NULL, NULL, '1183');
 
 
 --
@@ -358,7 +358,7 @@ INSERT INTO public.tenzone_with VALUES (28, 50);
 SELECT pg_catalog.setval('public.object_object_id_seq', 66, true);
 
 
--- Completed on 2020-11-09 11:27:44
+-- Completed on 2021-02-08 11:57:35
 
 --
 -- PostgreSQL database dump complete
