@@ -78,7 +78,7 @@ Digitare nel browser **localhost/prosomap-dev-master/**. Dovreste ottenere l'int
 
 ## NOTE
 
-Se si vuole utilizzare un database con nome diverso da **prosomap-dev** o con una password diversa da **prosomap**, è possibile crearlo secondo le proprie esigenze. Per far funzionare l'applicazione andranno modificati i file **index.php** e **load-sidebar-content**. In entrambi i file cercare la riga:
+Se si vuole utilizzare un database con nome diverso da **prosomap-dev** o con una password diversa da **prosomap**, è possibile crearlo secondo le proprie esigenze. Per far funzionare l'applicazione andranno modificati i file **index.php** e **load-sidebar-content.php**. In entrambi i file cercare la riga:
 
 ```
 $dbconn = pg_connect("dbname=prosomap-dev user=postgres password=prosomap") or die('Connection Failed');
