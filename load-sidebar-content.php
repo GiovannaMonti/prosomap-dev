@@ -1,5 +1,5 @@
 <?php
-$dbconn = pg_connect("dbname=tesifinal user=postgres password=unimi") or die('Connection Failed');
+$dbconn = pg_connect("dbname=prosomap-dev user=postgres password=prosomap") or die('Connection Failed');
 
 $type=$_POST['type'];
 $id="";
