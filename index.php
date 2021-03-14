@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <?php
-    $dbconn = pg_connect("dbname=tesifinal user=postgres password=unimi") or die('Connection Failed'); ?>
+    $dbconn = pg_connect("dbname=prosomap-dev user=postgres password=prosomap") or die('Connection Failed'); ?>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
