@@ -51,9 +51,11 @@ PgAdmin è una piattaforma open source per la gestione e lo sviluppo di database
 
 Nella cartella **db** del progetto sono contenuti i file di backup dello schema e dei dati del database (**prosomap-db-schema** e **prosomap-db-data**). Per utilizzarli bisogna creare un nuovo database da pgAdmin ed esportare in esso lo schema e i dati contenuti nei due file.
 
-- Creare il nuovo database cliccando con il tasto destro la voce **Databases** dal menu a sinistra. Chiamare il database **prosomap-dev**.
+- Creare il nuovo database cliccando con il tasto destro la voce **Databases** dal menu a sinistra.
   <br>
   <img src="images/postgres_create_db.jpg" width=50%>
+- Chiamare il database **prosomap-dev**.
+  <img src="images/postgres_db_name.jpg" width=50%>
 - Cliccare con il tasto destro sul database appena creato nel menu a sinistra e selezionare la voce **Query Tool**.
   <img src="images/postgres_open_query_tool.jpg" width=50%>
 - Nella finestra che si apre a destra, copiare il contenuto del file **prosomap-db-schema** e cliccare sull'icona di **run** (evidenziata in giallo).
