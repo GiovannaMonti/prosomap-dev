@@ -55,6 +55,7 @@ Nella cartella **db** del progetto sono contenuti i file di backup dello schema 
   <br>
   <img src="images/postgres_create_db.jpg" width=50%>
 - Chiamare il database **prosomap-dev**.
+  <br>
   <img src="images/postgres_db_name.jpg" width=50%>
 - Cliccare con il tasto destro sul database appena creato nel menu a sinistra e selezionare la voce **Query Tool**.
   <img src="images/postgres_open_query_tool.jpg" width=50%>
