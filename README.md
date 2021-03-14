@@ -67,7 +67,7 @@ Nella cartella **db** del progetto sono contenuti i file di backup dello schema 
 
 A questo punto il back-end dell'applicazione dovrebbe funzionare correttamente. 
 
-Per utilizzare ProsoMap è necessario scaricare la repository GitHub cliccando su **Code** > **Download ZIP**.
+Per utilizzare ProsoMap è necessario scaricare il repository GitHub cliccando su **Code** > **Download ZIP**.
   <img src="images/repo_download.jpg" width=70%>
 
 Una volta estratti i file contenuti in essa, bisogna spostare l'intera cartella in **xampp** > **htdocs**. Si dovrebbe ottenere qualcosa di simile a questo. Fare attenzione al percorso file che compare in alto:
