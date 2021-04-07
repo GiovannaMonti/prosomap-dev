@@ -3,7 +3,7 @@ ProsoMap is part of a curricular internship project carried out at Università d
 
 ## General information
 
-ProsoMap is a PHP-based application which requires PHP (**version number**) or higher. The database where all the data is stored requires PostgreSQL (**version number** or higher), an open source DMBS for the management of relational databases.
+ProsoMap is a PHP-based application which requires PHP (version 7.3.0 or higher). The database where all the data is stored requires PostgreSQL (version 9.6 or higher), an open source DMBS for the management of relational databases.
 
 A database dump can be found in this repository: the **prosomap-db-schema** file contains the database schema's dump, which can be interpreted by a PostgreSQL DBMS. The **prosomap-db-data** file stores all the test data used while developing the app. The database needs to be installed for the data to be displayed correctly on the map and in the sidebar section: export the schema and data files to a new PostgreSQL database to make it work.
 
