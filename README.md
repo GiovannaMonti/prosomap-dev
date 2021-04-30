@@ -1,90 +1,34 @@
-# prosomap-dev [readme in aggiornamento]
+# ProsoMap
+ProsoMap is part of a curricular internship project carried out at Università degli Studi di Milano. The internship's aim was to create a Single-Page Application for the visualization of a Prosopographic Atlas of literary works.
 
-## Guida all'installazione in locale
+## General information
 
-Di seguito vengono illustrati i passaggi e i software necessari per installare e rendere operativa l'applicazione in locale.
+ProsoMap is based on a series of JavaScript libraries, which are already working and included in the code. For more information and full documentation, follow the links below:
 
-### XAMPP
+**Leaflet:** https://leafletjs.com/reference-1.7.1.html
 
-XAMPP è uno stack software open source cross-platform sviluppato da Apache Friends, contenente MySQL, PHP e Perl.
+**Leaflet Markercluster:** https://github.com/Leaflet/Leaflet.markercluster
 
-#### Installazione
+**Leaflet.FeatureGroup.SubGroup:** https://github.com/ghybs/Leaflet.FeatureGroup.SubGroup
 
-   - Scaricare dal [sito ufficiale](https://www.apachefriends.org/it/index.html) l'ultima versione di XAMPP.
-   - Durante l'installazione, selezionare Server Apache e PHP. Il resto non è necessario.
-     <br>
-     <img src="images/xampp_install.jpg" width=50%>
-#### Utilizzo
+**Leaflet.sidebar:** https://github.com/turbo87/leaflet-sidebar/
 
-   - XAMPP fornisce un pannello di controllo che consente di controllare l’esecuzione dei diversi moduli (nel nostro caso solo Apache).
-     <br>
-     <img src="images/xampp_start.jpg" width=50%>
+**Leaflet.awesome-markers:** https://github.com/lvoogdt/Leaflet.awesome-markers
 
-### PostgreSQL
+**Vis Timeline:** https://visjs.github.io/vis-timeline/docs/timeline/
 
-PostgreSQL è un DBMS open source per la gestione di database relazionali.
 
-#### Installazione
+ProsoMap is a PHP-based application which requires PHP (version 7.3.0 or higher). The database where all the data is stored requires PostgreSQL (version 9.6 or higher), an open source DMBS for the management of relational databases.
 
-   - Scaricare dal [sito ufficiale](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) l'ultima versione di PostgreSQL.
-   - Il numero di porta di default viene impostato automaticamente. Non va modificato.
-     <br>
-     <img src="images/postgres_port.jpg" width=50%>
-   - Il nome utente di default è **postgres**.
-   - La password da impostare è **prosomap**. Sarà la password richiesta per accedere al database ed effettuare la connessione ad esso all'interno dell'applicazione.
-   - E' necessario caricare le librerie client PostgreSQL per PHP, che sono già presenti. Per farlo, si deve entrare in **xampp** > **php**. Nel file **php.ini** bisogna scommentare (ovvero togliere il ;) nelle righe:
-     - extension=pdo_pgsql
-     - extension=pgsql
-     <br>
-     <img src="images/xampp_php_ini.jpg" width=50%>
-     
-### PgAdmin
+A database dump can be found in this repository: the **prosomap-db-schema** file contains the database schema's dump, which can be interpreted by a PostgreSQL DBMS. The **prosomap-db-data** file stores all the test data used while developing the app. The database needs to be installed for the data to be displayed correctly on the map and in the sidebar section: export the schema and data files to a new PostgreSQL database to make it work.
 
-PgAdmin è una piattaforma open source per la gestione e lo sviluppo di database PostgreSQL.
+## Notes
+The current database name is set to **prosomap-dev** and the respective passoword is **prosomap**. These two parameters can be changed at any time: to make the application work with different parameters, the files named **index.php** and **load-sidebar-content.php** need to be modified.
 
-- Scaricare l'ultima versione di pgAdmin dal [sito ufficiale](https://www.pgadmin.org/download/) e seguire i passaggi necessari per l'installazione.
-- Aprire pgAdmin. Collegarsi al server PostgreSQL dal menu a sinistra, con nome utente **postgres** e password **prosomap** (è la password scelta in precedenza).
-<br>
-  <img src="images/postgres_menu.jpg" width=50%>
-
-### Importare la base di dati
-
-Nella cartella **db** del progetto sono contenuti i file di backup dello schema e dei dati del database (**prosomap-db-schema** e **prosomap-db-data**). Per utilizzarli bisogna creare un nuovo database da pgAdmin ed esportare in esso lo schema e i dati contenuti nei due file.
-
-- Creare il nuovo database cliccando con il tasto destro la voce **Databases** dal menu a sinistra.
-  <br>
-  <img src="images/postgres_create_db.jpg" width=50%>
-- Chiamare il database **prosomap-dev**.
-  <br>
-  <img src="images/postgres_db_name.jpg" width=50%>
-- Cliccare con il tasto destro sul database appena creato nel menu a sinistra e selezionare la voce **Query Tool**.
-  <img src="images/postgres_open_query_tool.jpg" width=50%>
-- Nella finestra che si apre a destra, copiare il contenuto del file **prosomap-db-schema** e cliccare sull'icona di **run** (evidenziata in giallo).
-  <img src="images/postgres_run_schema.jpg" width=70%>
-- Ripetere il passo precedente per il file **prosomap-db-data**.
-
-## Utilizzare l'applicazione
-
-A questo punto il back-end dell'applicazione dovrebbe funzionare correttamente. 
-
-Per utilizzare ProsoMap è necessario scaricare il repository GitHub cliccando su **Code** > **Download ZIP**.
-  <img src="images/repo_download.jpg" width=70%>
-
-Una volta estratti i file contenuti in essa, bisogna spostare l'intera cartella in **xampp** > **htdocs**. Si dovrebbe ottenere qualcosa di simile a questo. Fare attenzione al percorso file che compare in alto:
-  <img src="images/htdocs_folder.jpg" width=70%>
-
-Ora assicurarsi di avviare XAMPP e accendere il server Apache dal pannello di controllo (se è già attivo poichè era già stato avviato dopo l'installazione, riavviarlo).
-
-Digitare nel browser **localhost/prosomap-dev-master/**. Dovreste ottenere l'interfaccia funzionante di ProsoMap. 
-
-**N.B:** l'indirizzo e la porta del localhost possono variare in base al sistema operativo o alla singola macchina su cui si esegue.
-
-## NOTE
-
-Se si vuole utilizzare un database con nome diverso da **prosomap-dev** o con una password diversa da **prosomap**, è possibile crearlo secondo le proprie esigenze. Per far funzionare l'applicazione andranno modificati i file **index.php** e **load-sidebar-content.php**. In entrambi i file cercare la riga:
+Both files contain the following line:
 
 ```
 $dbconn = pg_connect("dbname=prosomap-dev user=postgres password=prosomap") or die('Connection Failed');
 ```
 
-e sostituire **dbname** con il nuovo nome del database, **password** con la nuova password.
+To rename the database or change the password, replace the current name with the desired one in the **dbname** field, or the new password in the **password** field. 
